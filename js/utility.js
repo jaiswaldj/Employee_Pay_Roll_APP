@@ -1,6 +1,4 @@
 const stringifyDate = (date) => {
-    const options = { day: 'numeric', month: 'short', year: 'numeric' };
-    const newDate = !date ? "undefined" :
-                    newDate(Date.parse(date)).toLocalDateString('en-GB', options);
-    return newDate;
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    return !date ? 'undefined' : new Date(Date.parse(date)).toLocaleDateString('en-GB', options);
 }
